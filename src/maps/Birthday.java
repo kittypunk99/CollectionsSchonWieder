@@ -42,4 +42,12 @@ public class Birthday implements Comparable<Birthday> {
         }
         return day - o.day;
     }
+
+    public String toString() {
+        return String.format("%02d.%02d.%04d", day, month, year);
+    }
+
+    public boolean isLeapYear() {
+        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+    }
 }
