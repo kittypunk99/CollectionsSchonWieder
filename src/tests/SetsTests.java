@@ -1,6 +1,7 @@
 package tests;
 
 
+import cocktails.Cocktailbar;
 import sets.Buch;
 
 import java.util.Comparator;
@@ -33,5 +34,7 @@ public class SetsTests {
         set2.add(b5);
         set2.add(b6);
         set2.forEach(System.out::println);
+
+        Cocktailbar.getAvailableDrinks("ressources/cocktailmix.txt").forEach(System.out::println);
     }
 }

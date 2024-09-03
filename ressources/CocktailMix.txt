@@ -1,0 +1,16 @@
+14
+pineapple juice:Latin Lover,Carribean Dream,Malibu Barbados,Malibu Margarita
+cachaca:Brazilian Sunrise,Latin Lover,Caipirinha,Caipifragola
+carribean rum with coconut:Malibu Barbados,Malibu Margarita,Malibu Sunrise
+cointreau:Margarita,Malibu Margarita,Daiquiri
+grenadine:Brazilian Sunrise,Tequila Sunrise,Carribean Dream,Malibu Sunrise
+lemon juice:Brazilian Sunrise,Tequila Sunrise,Latin Lover,Carribean Dream,Malibu Margarita
+lime juice:Latin Lover,Caipirinha,Caipifragola,Strawberry Daiquiri,Margarita,Malibu Margarita
+orange juice:Brazilian Sunrise,Tequila Sunrise,Carribean Dream,Malibu Barbados,Malibu Sunrise
+passion fruit nectar:Carribean Dream
+rum:Strawberry Daiquiri,Carribean Dream,Daiquiri
+strawberry liqueur:Caipifragola,Strawberry Daiquiri
+strawberry sirup:Caipifragola
+tequila:Tequila Sunrise,Latin Lover,Margarita,Malibu Margarita
+sugar:Caipirinha,Daiquiri
+cachaca,lime juice,grenadine,lemon juice,orange juice,carribean rum with coconut,sugar

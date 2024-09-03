@@ -7,6 +7,12 @@ public class Buch implements Comparable<Buch> {
     public String autor;
     public int preis;
 
+    public Buch(String titel, String autor, int preis) {
+        this.titel = titel;
+        this.autor = autor;
+        this.preis = preis;
+    }
+
     public String getTitel() {
         return titel;
     }
@@ -17,12 +23,6 @@ public class Buch implements Comparable<Buch> {
 
     public int getPreis() {
         return preis;
-    }
-
-    public Buch(String titel, String autor, int preis) {
-        this.titel = titel;
-        this.autor = autor;
-        this.preis = preis;
     }
 
     @Override
@@ -41,11 +41,7 @@ public class Buch implements Comparable<Buch> {
 
     @Override
     public String toString() {
-        return "Buch{" +
-                "titel='" + titel + '\'' +
-                ", autor='" + autor + '\'' +
-                ", preis=" + preis +
-                '}';
+        return "Buch{" + "titel='" + titel + '\'' + ", autor='" + autor + '\'' + ", preis=" + preis + '}';
     }
 
     @Override
