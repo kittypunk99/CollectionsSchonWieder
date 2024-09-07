@@ -107,7 +107,7 @@ public class BirthdayDatamining {
         });
 
         int[] r = new int[1];
-        count.forEach((key, value) -> {
+        count.forEach((_, value) -> {
             if (value > 1) r[0] += value;
         });
         return r[0];
