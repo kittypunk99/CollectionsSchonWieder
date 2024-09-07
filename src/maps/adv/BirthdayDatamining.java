@@ -99,16 +99,18 @@ public class BirthdayDatamining {
         return birthdays.stream().filter(b -> b.compareTo(youngestTeacher) > 0).collect(Collectors.toList());
     }
 
-    public Map<Birthday, Long> peopleWithSameBirthday() {
-        TreeMap<Birthday, Long> birthdayMap = new TreeMap<>();
-        birthdays.forEach(b -> birthdayMap.put(b, birthdayMap.getOrDefault(b, 0L) + 1));
-        /*int x = 0;
-        for (Map.Entry<Birthday, Long> entry : birthdayMap.entrySet()) {
-            if (entry.getValue() > 1) {
-                x += entry.getValue();
-            }
-        }*/
-        return birthdayMap; //birthdays.size()-(int) birthdayMap.values().stream().filter(v -> v > 1).count();//x; //birthdayMap.size();//(int) birthdayMap.values().stream().filter(v -> v > 1).count(); was ist da gewollt?
+    public int peopleWithSameBirthday() {
+        Map<Short, Integer> count = new HashMap<>();
+        birthdays.forEach(b -> {
+            short bd = (short) (b.getDay() | (b.getMonth() << 8));
+            count.put(bd, count.getOrDefault(bd, 0) + 1);
+        });
+
+        int[] r = new int[1];
+        count.forEach((key, value) -> {
+            if (value > 1) r[0] += value;
+        });
+        return r[0];
     }
 }
 
