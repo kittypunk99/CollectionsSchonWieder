@@ -14,10 +14,21 @@ public class Punkt implements Comparable<Punkt> {
     }
 
     @Override
+    public String toString() {
+        return "(" + x + "|" + y + ")";
+    }
+
+    @Override
     public int compareTo(Punkt o) {
         int result = Double.compare(this.distance(new Punkt(0, 0)), o.distance(new Punkt(0, 0)));
         if (result == 0) {
             result = Integer.compare(x + y, o.x + o.y);
+        }
+        if (result == 0) {
+            result = Integer.compare(x, o.x);
+        }
+        if (result == 0) {
+            result = Integer.compare(y, o.y);
         }
         return result;
     }

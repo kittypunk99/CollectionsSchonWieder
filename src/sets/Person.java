@@ -4,6 +4,15 @@ public class Person implements Comparable<Person> {
     public String vorname;
     public String famname;
 
+    public Person(String vorname, String famname) {
+        this.vorname = vorname;
+        this.famname = famname;
+    }
+
+    @Override
+    public String toString() {
+        return famname + " " + vorname;
+    }
 
     @Override
     public int compareTo(Person o) {
