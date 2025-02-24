@@ -105,7 +105,6 @@ public class BirthdayDatamining {
             short bd = (short) (b.getDay() | (b.getMonth() << 8));
             count.put(bd, count.getOrDefault(bd, 0) + 1);
         });
-
         int[] r = new int[1];
         count.forEach((_, value) -> {
             if (value > 1) r[0] += value;

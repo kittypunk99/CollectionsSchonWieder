@@ -16,18 +16,16 @@ public class Punkt implements Comparable<Punkt> {
     }
 
     @Override
-    public int compareTo(Punkt o) {
-       /* int result = Double.compare(this.distance(new Punkt(0, 0)), o.distance(new Punkt(0, 0)));
-        if (result == 0) {
-            result = ;
-        }*/
-        return Double.compare(Math.atan2(x, y), Math.atan2(o.x ,  o.y));
+    public String toString() {
+        return "(" + x + "|" + y + ")";
     }
 
     @Override
-    public String toString() {
-        return "("+x+" | "+y+")";
+    public int compareTo(Punkt o) {
+        return Double.compare(Math.atan2(x, y), Math.atan2(o.x ,  o.y));
     }
+
+
 
     public static void main(String[] args) {
         Punkt p1 = new Punkt(1, 1);
