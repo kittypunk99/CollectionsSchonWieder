@@ -19,28 +19,28 @@ public class BirthdayDatamining {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        BirthdayDatamining bd = new BirthdayDatamining("ressources/birthdays.txt");
-        System.out.println(bd.averageBirthYear());
-        System.out.println(bd.mostCommonBirthyear());
-        System.out.println(Arrays.toString(bd.birthdaysPerMonth()));
-        System.out.println(bd.getBirthdaysOnDay(26, 1));
-        System.out.println(bd.getBirthdaysOnDay(29, 2));
-        System.out.println(bd.getBirthdaysOnDay(22, 5));
-        System.out.println(bd.getBirthdaysOnDay(24, 12));
-        System.out.println(bd.birthdaysOnLeapYear());
-        System.out.println(bd.getOldest());
-        System.out.println(bd.getYoungest());
-        System.out.println(bd.getYoungestTeacher());
-        System.out.println(bd.getAmountOfTeachers());
+            public static void main(String[] args) throws IOException {
+                BirthdayDatamining bd = new BirthdayDatamining("ressources/birthdays.txt");
+                System.out.println(bd.averageBirthYear());
+                System.out.println(bd.mostCommonBirthyear());
+                System.out.println(Arrays.toString(bd.birthdaysPerMonth()));
+                System.out.println(bd.getBirthdaysOnDay(26, 1));
+                System.out.println(bd.getBirthdaysOnDay(29, 2));
+                System.out.println(bd.getBirthdaysOnDay(22, 5));
+                System.out.println(bd.getBirthdaysOnDay(24, 12));
+                System.out.println(bd.birthdaysOnLeapYear());
+                System.out.println(bd.getOldest());
+                System.out.println(bd.getYoungest());
+                System.out.println(bd.getYoungestTeacher());
+                System.out.println(bd.getAmountOfTeachers());
 
-        System.out.println(bd.getTeacherBirthdays().getFirst());
-        System.out.println(bd.getTeacherBirthdays().getLast());
-        System.out.println(bd.getStudentBirthdays().getFirst());
-        System.out.println(bd.getStudentBirthdays().getLast());
+                System.out.println(bd.getTeacherBirthdays().getFirst());
+                System.out.println(bd.getTeacherBirthdays().getLast());
+                System.out.println(bd.getStudentBirthdays().getFirst());
+                System.out.println(bd.getStudentBirthdays().getLast());
 
-        System.out.println(bd.peopleWithSameBirthday());
-    }
+                System.out.println(bd.peopleWithSameBirthday());
+            }
 
     public double averageBirthYear() {
         return birthdays.stream().mapToInt(Birthday::getYear).average().orElse(0);
@@ -73,8 +73,8 @@ public class BirthdayDatamining {
     }
 
     public Birthday getYoungestTeacher() {
-        Birthday oldest = birthdays.getFirst();
         List<Birthday> birthdays = this.birthdays.stream().sorted().toList();
+        Birthday oldest = birthdays.getFirst();
         for (Birthday b : birthdays) {
             if (b.getYear() - oldest.getYear() >= 4) {
                 return oldest;

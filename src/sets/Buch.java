@@ -22,7 +22,7 @@ public class Buch implements Comparable<Buch> {
     }
 
     public int getPreis() {
-        return preis;
+         return preis;
     }
 
     @Override
