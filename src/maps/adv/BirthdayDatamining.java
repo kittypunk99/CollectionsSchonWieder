@@ -69,7 +69,7 @@ public class BirthdayDatamining {
     }
 
     public Birthday getYoungest() {
-        return birthdays.stream().max(Birthday::compareTo).orElse(null);
+        return birthdays.stream().max(Birthday::compareTo).orElse(null);//&//
     }
 
     public Birthday getYoungestTeacher() {
